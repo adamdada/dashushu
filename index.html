@@ -1,24 +1,26 @@
 <!DOCTYPE html>
+
  <html>
  <head>
+ <meta charset='utf-8'>
 
- <title>ÎÒÊÇÍ·²¿£¡
+ <title>æˆ‘æ˜¯å¤´éƒ¨ï¼
  
  </title>
 </head> 
  <body>
- <h1>ÎÒ¾ÍÊÇ¸ö²âÊÔ£¬ÄãÀ´´ÁÎÒ°¡£¡
+ <h1>æˆ‘å°±æ˜¯ä¸ªæµ‹è¯•ï¼Œä½ æ¥æˆ³æˆ‘å•Šï¼
  </h1>
  <br>
  <br>
- <p>´ÁÎÒ´ÁÎÒ´ÁÎÒ´ÁÎÒ´ÁÎÒ´Á´Á´Á´Á´Á£¡>>>
+ <p>æˆ³æˆ‘æˆ³æˆ‘æˆ³æˆ‘æˆ³æˆ‘æˆ³æˆ‘æˆ³æˆ³æˆ³æˆ³æˆ³ï¼>>>
  </p>
  <script>
- var imgUrl = 'https://dn-runrunfast.qbox.me/cat.gif';  // ·ÖÏíºóÕ¹Ê¾µÄÒ»ÕÅÍ¼Æ¬
-        var lineLink = 'http://www.21d.me/'; // µã»÷·ÖÏíºóÌø×ªµÄÒ³ÃæµØÖ·
-        var descContent = "´ó¼ÒºÃ£¬ÎÒÊÇÃèÊöĞÅÏ¢";  // ·ÖÏíºóµÄÃèÊöĞÅÏ¢
-        var shareTitle = '´ó¼ÒºÃ£¬ÎÒÊÇ±êÌâ';  // ·ÖÏíºóµÄ±êÌâ
-        var appid = '';  // Ó¦ÓÃid,Èç¹ûÓĞ¿ÉÒÔÌî£¬Ã»ÓĞ¾ÍÁô¿Õ
+ var imgUrl = 'https://dn-runrunfast.qbox.me/cat.gif';  // åˆ†äº«åå±•ç¤ºçš„ä¸€å¼ å›¾ç‰‡
+        var lineLink = 'http://www.21d.me/'; // ç‚¹å‡»åˆ†äº«åè·³è½¬çš„é¡µé¢åœ°å€
+        var descContent = "å¤§å®¶å¥½ï¼Œæˆ‘æ˜¯æè¿°ä¿¡æ¯";  // åˆ†äº«åçš„æè¿°ä¿¡æ¯
+        var shareTitle = 'å¤§å®¶å¥½ï¼Œæˆ‘æ˜¯æ ‡é¢˜';  // åˆ†äº«åçš„æ ‡é¢˜
+        var appid = '';  // åº”ç”¨id,å¦‚æœæœ‰å¯ä»¥å¡«ï¼Œæ²¡æœ‰å°±ç•™ç©º
         
         function shareFriend() {
             WeixinJSBridge.invoke('sendAppMessage',{
@@ -30,7 +32,7 @@
                 "desc": descContent,
                 "title": shareTitle
             }, function(res) {
-                //_report('send_msg', res.err_msg);  // ÕâÊÇ»Øµ÷º¯Êı£¬±ØĞë×¢ÊÍµô
+                //_report('send_msg', res.err_msg);  // è¿™æ˜¯å›è°ƒå‡½æ•°ï¼Œå¿…é¡»æ³¨é‡Šæ‰
             })
         }
         function shareTimeline() {
@@ -42,7 +44,7 @@
                 "desc": descContent,
                 "title": shareTitle
             }, function(res) {
-                   //_report('timeline', res.err_msg); // ÕâÊÇ»Øµ÷º¯Êı£¬±ØĞë×¢ÊÍµô
+                   //_report('timeline', res.err_msg); // è¿™æ˜¯å›è°ƒå‡½æ•°ï¼Œå¿…é¡»æ³¨é‡Šæ‰
             });
         }
         function shareWeibo() {
@@ -53,17 +55,17 @@
                 //_report('weibo', res.err_msg);
             });
         }
-        // µ±Î¢ĞÅÄÚÖÃä¯ÀÀÆ÷Íê³ÉÄÚ²¿³õÊ¼»¯ºó»á´¥·¢WeixinJSBridgeReadyÊÂ¼ş¡£
+        // å½“å¾®ä¿¡å†…ç½®æµè§ˆå™¨å®Œæˆå†…éƒ¨åˆå§‹åŒ–åä¼šè§¦å‘WeixinJSBridgeReadyäº‹ä»¶ã€‚
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-            // ·¢ËÍ¸øºÃÓÑ
+            // å‘é€ç»™å¥½å‹
             WeixinJSBridge.on('menu:share:appmessage', function(argv){
                 shareFriend();
             });
-            // ·ÖÏíµ½ÅóÓÑÈ¦
+            // åˆ†äº«åˆ°æœ‹å‹åœˆ
             WeixinJSBridge.on('menu:share:timeline', function(argv){
                 shareTimeline();
             });
-            // ·ÖÏíµ½Î¢²©
+            // åˆ†äº«åˆ°å¾®åš
             WeixinJSBridge.on('menu:share:weibo', function(argv){
                 shareWeibo();
             });
